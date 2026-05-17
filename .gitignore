@@ -6,7 +6,7 @@ __pycache__/
 *.pyc
 
 # Generated outputs
-generated/
+#generated/
 
 # Temporary diff file
 diff.txt
