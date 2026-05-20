@@ -1,4 +1,4 @@
-import json
+import json, os
 from scripts.common.ai_client import ask_ai
 
 SECURITY_PROMPT = '''
@@ -30,7 +30,7 @@ if __name__ == "__main__":
         code = f.read()
 
     result = security_scan(code)
-
+    os.makedirs("generated", exist_ok=True)
     with open("generated/security_report.txt", "w") as f:
         f.write(json.dumps(result, indent=2))
 

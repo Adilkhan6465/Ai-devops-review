@@ -1,4 +1,4 @@
-import json
+import json, os
 from scripts.common.ai_client import ask_ai
 
 SYSTEM_PROMPT = """
@@ -39,7 +39,7 @@ if __name__ == "__main__":
         diff,
         "Friday 10 PM"
     )
-
+    os.makedirs("generated", exist_ok=True)
     with open("generated/risk_report.json", "w") as f:
         json.dump(result, f, indent=2)
 

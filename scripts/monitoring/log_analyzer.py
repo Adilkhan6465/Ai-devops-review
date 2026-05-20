@@ -1,3 +1,4 @@
+import os
 from scripts.common.ai_client import ask_ai
 
 SYSTEM_PROMPT = f"""
@@ -16,7 +17,7 @@ if __name__ == "__main__":
         logs = f.read()
 
     report = analyze_logs(logs)
-
+    os.makedirs("generated", exist_ok=True)
     with open("generated/log_report.txt", "w") as f:
         f.write(str(report))
 
