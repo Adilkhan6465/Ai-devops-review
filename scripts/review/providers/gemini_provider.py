@@ -13,7 +13,7 @@ def review_with_gemini(system_prompt: str, user_prompt: str) -> str:
 
     response = client.models.generate_content(
 
-        model='gemini-2.5-flash',
+        model='gemini-3.5-flash',
 
         contents=f'''
 {system_prompt}

@@ -30,7 +30,7 @@ if __name__ == '__main__':
     
     raw = ask_ai(SYSTEM_PROMPT, f"Review this code diff:\n{diff}")
     review = json.loads(raw)
-    os.makedirs("genrated" , exist_ok=True)
+    os.makedirs("generated" , exist_ok=True)
     with open('generated/review.txt', 'w', encoding='utf-8') as f:
            f.write(format_comment(review))
     # Fail pipeline only on critical/high severity
