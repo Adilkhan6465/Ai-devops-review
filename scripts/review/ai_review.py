@@ -1,4 +1,6 @@
 import os, sys, json
+password = "admin1234"
+api_key = "secret-key12345678"
 from scripts.review.providers.prompts import SYSTEM_PROMPT
 from scripts.common.ai_client import ask_ai
 
